@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width:device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <title>Government Offices | Politico</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="branding">
+            <h1>Politi<span class="highlight">co</span></h1>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="OfficesAdmin.html">Home</a></li>
+                <li><a href="AdminLogin.html">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="col-3 col-s-3 sidebar">
+            <ul>
+                <li><a href="PartiesAdmin.html"> Political Parties</a></li>
+                <li><a href="OfficesAdmin.html">Government Offices</a></li>
+                <li><a href="#">Politicians</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-s-9">
+            <div class="form-title">
+                <h3>Register office</h3><br>
+                <hr>
+                <form class="form-content">
+                    <label id="officeName"><b>Office name</b></label>
+                    <input type="text" id="officeName" required><br>
+                    <label for="officeType"><b>Office type</b></label>
+                    <select id="officeType" name="officeType" required>
+                        <option selected="true" disabled="true">Select office</option>
+                        <option>Federal office</option>
+                        <option>Legislative office</option>
+                        <option>State office</option>
+                        <option>Local government office</option>
+                    </select><br>
+                    <input type="submit" name="submit" value="Submit">
+                </form>
+            </div>        
+            <div class="tables">
+                <table>
+                    <tr class="table-header">
+                        <th colspan="6">Offices</th>
+                    </tr>
+                    <tr class="table-header">
+                        <th>#</th>
+                        <th>Office name</th>
+                        <th>Type</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>President</td>
+                        <td>Federal Office</td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <h4>Andela bootcamp challenge &copy, Politico 2019</h4>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
