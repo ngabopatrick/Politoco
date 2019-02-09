@@ -1,0 +1,2 @@
+# Politoco
+Andela bootcamp challenge
