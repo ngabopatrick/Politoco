@@ -26,7 +26,7 @@
         <div class="col-3 col-s-3 sidebar">
             <ul>
                 <li><a href="PartiesAdmin.html"> Political Parties</a></li>
-                <li><a href="OfficesAdmin.html">Government Offices</a></li>
+                <li class="active" style="background-color: #1F618D;"><a href="OfficesAdmin.html">Government Offices</a></li>
                 <li><a href="#">Politicians</a></li>
             </ul>
         </div>
@@ -47,26 +47,51 @@
                     </select><br>
                     <input type="submit" name="submit" value="Submit">
                 </form>
-            </div>        
-            <div class="tables">
+            </div>
+            <div>
                 <table>
-                    <tr class="table-header">
-                        <th colspan="6">Offices</th>
-                    </tr>
-                    <tr class="table-header">
-                        <th>#</th>
-                        <th>Office name</th>
-                        <th>Type</th>
-                        <th colspan="2">Actions</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>President</td>
-                        <td>Federal Office</td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
+                    <thead>
+                        <tr class="table-header">
+                            <th colspan="6">Offices</th>
+                        </tr>
+                        <tr class="table-header">
+                            <th>#</th>
+                            <th>Office name</th>
+                            <th>Office type</th>
+                            <th colspan="2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>President</td>
+                            <td>Federal Office</td>
+                            <td><button style="padding: 10px; border:none; width: 80px; background: #29AB87; color:#fff; border-radius:10px;"
+                                    id="edit-office">Edit</button>
+                            <button style="padding: 10px; border:none; width: 80px; background: #DC143C; color:#fff; border-radius:10px;">Delete</button></td>
+                        </tr>
+                    </tbody>
                 </table>
+            </div>
+            <div class="modal" id="edit-office-modal" style="display: none;">
+                <div class="form-title">
+                    <span class="close">&times;</span>
+                    <h3>Edit office</h3><br>
+                    <hr>
+                    <form class="form-content">
+                        <label id="officeName"><b>Office name</b></label>
+                        <input type="text" id="officeName" required><br>
+                        <label for="officeType"><b>Office type</b></label>
+                        <select id="officeType" name="officeType" required>
+                            <option selected="true" disabled="true">Select office</option>
+                            <option>Federal office</option>
+                            <option>Legislative office</option>
+                            <option>State office</option>
+                            <option>Local government office</option>
+                        </select><br>
+                        <input type="submit" name="submit" value="Save changes">
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -75,7 +100,7 @@
     <div id="footer">
         <h4>Andela bootcamp challenge &copy, Politico 2019</h4>
     </div>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
 </body>
 
 </html>
