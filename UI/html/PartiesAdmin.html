@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width:device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <title>Government Offices | Politico</title>
+    <title>Political parties | Politico</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         </div>
         <div class="nav-menu">
             <ul>
-                <li><a href="OfficesAdmin.html">Home</a></li>
+                <li><a href="AdminPage.html">Home</a></li>
                 <li><a href="AdminLogin.html">Logout</a></li>
             </ul>
         </div>
@@ -25,76 +25,80 @@
     <div id="content">
         <div class="col-3 col-s-3 sidebar">
             <ul>
+                <li><a href="PartiesAdmin.html"> Political Parties</a></li>
                 <li><a href="OfficesAdmin.html">Government Offices</a></li>
-                <li><a href="PartiesAdmin.html"> Political Parties</a></li>            
                 <li><a href="politicians.html">Politicians</a></li>
             </ul>
         </div>
         <div class="col-6 col-s-9">
             <div class="form-title">
-                <h3>Register office</h3><br>
+                <h3>Register party</h3><br>
                 <hr>
                 <form class="form-content">
-                    <label id="officeName"><b>Office name</b></label>
-                    <input type="text" id="officeName" required><br>
-                    <label for="officeType"><b>Office type</b></label>
-                    <select id="officeType" name="officeType" required>
-                        <option selected="true" disabled="true">Select office</option>
-                        <option>Federal office</option>
-                        <option>Legislative office</option>
-                        <option>State office</option>
-                        <option>Local government office</option>
-                    </select><br>
+                    <label for="name"><b>Party name</b></label>
+                    <input type="text" placeholder="Enter name" name="name" required>
+
+                    <label for="hqAddress"><b>HQ Address</b></label>
+                    <input type="text" placeholder="Enter hqAddress" name="hqAddress" required>
+
+                    <label for="logoUrl"><b>Logo</b></label>
+                    <input type="file" name="logo" required>
+                    <hr>
+                    <br>
                     <input type="submit" name="submit" value="Submit">
                 </form>
             </div>
-            <div>
+
+            <div class="tables">
                 <table>
                     <thead>
                         <tr class="table-header">
-                            <th colspan="4">Offices</th>
+                            <th colspan="5">Political parties</th>
                         </tr>
                         <tr class="table-header">
                             <th>#</th>
-                            <th>Office name</th>
-                            <th>Office type</th>
+                            <th>Party name</th>
+                            <th>Address</th>
+                            <th>Logo</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>President</td>
-                            <td>Federal Office</td>
+                            <td>Republicans</td>
+                            <td>123 Washington DC</td>
+                            <td><img src="images/placeholder.png" width="100" height="80"></td>
                             <td><button style="padding: 10px; border:none; width: 80px; background: #29AB87; color:#fff; border-radius:10px;"
                                     id="edit-office">Edit</button>
-                            <button style="padding: 10px; border:none; width: 80px; background: #DC143C; color:#fff; border-radius:10px;">Delete</button></td>
+                                <button style="padding: 10px; border:none; width: 80px; background: #DC143C; color:#fff; border-radius:10px;">Delete</button></td>
                         </tr>
+
                     </tbody>
+
                 </table>
             </div>
             <div class="modal" id="edit-office-modal" style="display: none;">
                 <div class="form-title">
                     <span class="close">&times;</span>
-                    <h3>Edit office</h3><br>
+                    <h3>Edit party</h3><br>
                     <hr>
                     <form class="form-content">
-                        <label id="officeName"><b>Office name</b></label>
-                        <input type="text" id="officeName" required><br>
-                        <label for="officeType"><b>Office type</b></label>
-                        <select id="officeType" name="officeType" required>
-                            <option selected="true" disabled="true">Select office</option>
-                            <option>Federal office</option>
-                            <option>Legislative office</option>
-                            <option>State office</option>
-                            <option>Local government office</option>
-                        </select><br>
+                        <label for="name"><b>Party name</b></label>
+                        <input type="text" placeholder="Enter name" name="name" required>
+
+                        <label for="hqAddress"><b>HQ Address</b></label>
+                        <input type="text" placeholder="Enter hqAddress" name="hqAddress" required>
+
+                        <label for="logoUrl"><b>Logo</b></label>
+                        <input type="file" name="logo" required>
+                        <hr>
+                        <br>
                         <input type="submit" name="submit" value="Save changes">
                     </form>
                 </div>
             </div>
         </div>
-
     </div>
 
     <div id="footer">
