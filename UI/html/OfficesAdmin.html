@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width:device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <title>Government Offices | Politico</title>
 </head>
 
@@ -32,11 +32,13 @@
         </div>
         <div class="col-6 col-s-9">
             <div class="form-title">
-                <h3>Register office</h3><br>
+                <h3>Register office</h3>
+                <br>
                 <hr>
                 <form class="form-content">
                     <label id="officeName"><b>Office name</b></label>
-                    <input type="text" id="officeName" required><br>
+                    <input type="text" id="officeName" required>
+                    <br>
                     <label for="officeType"><b>Office type</b></label>
                     <select id="officeType" name="officeType" required>
                         <option selected="true" disabled="true">Select office</option>
@@ -44,7 +46,8 @@
                         <option>Legislative office</option>
                         <option>State office</option>
                         <option>Local government office</option>
-                    </select><br>
+                    </select>
+                    <br>
                     <input type="submit" name="submit" value="Submit">
                 </form>
             </div>
@@ -66,21 +69,24 @@
                             <td>1</td>
                             <td>President</td>
                             <td>Federal Office</td>
-                            <td><button style="padding: 10px; border:none; width: 80px; background: #29AB87; color:#fff; border-radius:10px;"
-                                    id="edit-office">Edit</button>
-                                <button style="padding: 10px; border:none; width: 80px; background: #DC143C; color:#fff; border-radius:10px;">Delete</button></td>
+                            <td>
+                                <button class="off-edit" id="edit-office">Edit</button>
+                                <button class="del">Delete</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="modal" id="edit-office-modal" style="display: none;">
+            <div class="modal" id="edit-office-modal">
                 <div class="form-title">
                     <span class="close">&times;</span>
-                    <h3>Edit office</h3><br>
+                    <h3>Edit office</h3>
+                    <br>
                     <hr>
                     <form class="form-content">
                         <label id="officeName"><b>Office name</b></label>
-                        <input type="text" id="officeName" required><br>
+                        <input type="text" id="officeName" required>
+                        <br>
                         <label for="officeType"><b>Office type</b></label>
                         <select id="officeType" name="officeType" required>
                             <option selected="true" disabled="true">Select office</option>
@@ -88,7 +94,8 @@
                             <option>Legislative office</option>
                             <option>State office</option>
                             <option>Local government office</option>
-                        </select><br>
+                        </select>
+                        <br>
                         <input type="submit" name="submit" value="Save changes">
                     </form>
                 </div>
@@ -100,7 +107,7 @@
     <div id="footer">
         <h4>Andela bootcamp challenge &copy, Politico 2019</h4>
     </div>
-    <script type="text/javascript" src="./js/scripts.js"></script>
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </body>
 
 </html>

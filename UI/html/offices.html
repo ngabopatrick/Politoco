@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width:device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <title>User homepage | Politico</title>
 </head>
 
@@ -30,54 +30,55 @@
                 <li><a href="votes.html"> Last Votes</a></li>
             </ul>
         </div>
-        <div class="col-6 col-s-9">
+        <div class="col-8 col-s-9">
 
             <div class="tables">
-                    <table>
-                            <thead>
-                                <tr class="table-header">
-                                    <th colspan="4">Offices</th>
-                                </tr>
-                                <tr class="table-header">
-                                    <th>#</th>
-                                    <th>Office name</th>
-                                    <th>Office type</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>President</td>
-                                    <td>Federal Office</td>
-                                    <td><button style="padding: 10px; border:none; width: 80px; background: #29AB87; color:#fff; border-radius:10px;"
-                                            id="edit-office">Express interest</button>
-                                   
-                                </tr>
-                            </tbody>
-                        </table>
+                <table>
+                    <thead>
+                        <tr class="table-header">
+                            <th colspan="4">Offices</th>
+                        </tr>
+                        <tr class="table-header">
+                            <th>#</th>
+                            <th>Office name</th>
+                            <th>Office type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>President</td>
+                            <td>Federal Office</td>
+                            <td>
+                                <button class="off-edit" id="edit-office">Express interest</button>
+
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            
-            <div class="modal" id="edit-office-modal" style="display: none;">
+
+            <div class="modal" id="edit-office-modal">
                 <div class="form-title">
                     <span class="close">&times;</span>
-                    <h3>Apply for the office</h3><br>
+                    <h3>Apply for the office</h3>
+                    <br>
                     <hr>
                     <form class="form-content">
                         <label>write why you need to run for this office</label>
-                        <textarea placeholder="text heare..." style="width:100%;"></textarea>
+                        <textarea placeholder="text heare..."></textarea>
                         <input type="submit" name="submit" value="Send">
                     </form>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
     <div id="footer">
         <h4>Andela bootcamp challenge &copy, Politico 2019</h4>
     </div>
-    <script type="text/javascript" src="./js/scripts.js"></script>
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </body>
 
 </html>

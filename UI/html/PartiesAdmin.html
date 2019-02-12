@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width:device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <title>Political parties | Politico</title>
 </head>
 
@@ -32,7 +32,8 @@
         </div>
         <div class="col-6 col-s-9">
             <div class="form-title">
-                <h3>Register party</h3><br>
+                <h3>Register party</h3>
+                <br>
                 <hr>
                 <form class="form-content">
                     <label for="name"><b>Party name</b></label>
@@ -68,20 +69,22 @@
                             <td>1</td>
                             <td>Republicans</td>
                             <td>123 Washington DC</td>
-                            <td><img src="images/placeholder.png" width="100" height="80"></td>
-                            <td><button style="padding: 10px; border:none; width: 80px; background: #29AB87; color:#fff; border-radius:10px;"
-                                    id="edit-office">Edit</button>
-                                <button style="padding: 10px; border:none; width: 80px; background: #DC143C; color:#fff; border-radius:10px;">Delete</button></td>
+                            <td><img src="images/placeholder.png"></td>
+                            <td>
+                                <button class="off-edit" id="edit-office">Edit</button>
+                                <button class="del">Delete</button>
+                            </td>
                         </tr>
 
                     </tbody>
 
                 </table>
             </div>
-            <div class="modal" id="edit-office-modal" style="display: none;">
+            <div class="modal" id="edit-office-modal">
                 <div class="form-title">
                     <span class="close">&times;</span>
-                    <h3>Edit party</h3><br>
+                    <h3>Edit party</h3>
+                    <br>
                     <hr>
                     <form class="form-content">
                         <label for="name"><b>Party name</b></label>
@@ -104,7 +107,7 @@
     <div id="footer">
         <h4>Andela bootcamp challenge &copy, Politico 2019</h4>
     </div>
-    <script type="text/javascript" src="./js/scripts.js"></script>
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </body>
 
 </html>
