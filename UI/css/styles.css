@@ -3,10 +3,13 @@
     padding: 0;
     margin: 0;
 }
-html, body {
+
+html,
+body {
     font-family: medium-content-sans-serif-font, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 14px;
 }
+
 /*styling the layout*/
 #header {
     background-color: #f6f6f6;
@@ -18,10 +21,12 @@ html, body {
     margin: 0 auto;
     position: relative;
 }
+
 .branding {
     float: left;
     margin: 10px;
 }
+
 .highlight {
     background-color: #a6001a;
     font-family: Mija;
@@ -30,15 +35,18 @@ html, body {
     font-size: 40px;
     color: #ffffff;
 }
+
 .nav-menu {
     float: right;
     margin: 10px;
 }
+
 .nav-menu ul {
     list-style-type: none;
     margin: 10px;
     padding: 0;
 }
+
 .nav-menu li {
     border-radius: 10px;
     border: 1px solid #000;
@@ -49,67 +57,87 @@ html, body {
     text-decoration: none;
     font-size: 14px;
 }
+
 .nav-menu li:hover {
     background-color: #1F618D;
     color: #fff;
 }
+
 .nav-menu a {
     text-decoration: none;
     color: #000000;
 }
-img{
-    width:150px;
-    height:120px;
+
+img {
+    width: 150px;
+    height: 120px;
 }
+
 .form-content {
     padding: 10px;
 }
-.form-content input[type=text], input[type=email], input[type=submit], input[type=password], select {
+
+.form-content input[type=text],
+input[type=email],
+input[type=submit],
+input[type=password],
+select {
     padding: 5px;
     margin: 5px;
     width: 100%;
 }
-table, th, td {
+
+table,
+th,
+td {
     border-collapse: collapse;
     margin: auto;
     font-size: 16px;
     padding: 10px;
     text-align: center;
 }
+
 th {
     border-bottom: 1px solid #fff;
 }
-td{
-    border-bottom: 1px solid #1F618D;  
+
+td {
+    border-bottom: 1px solid #1F618D;
 }
+
 thead {
     padding: 8px;
     background: #1F618D;
     font-size: 16px;
     color: #fff;
 }
+
 tbody {
     border: 1px solid #1F618D;
 }
+
 table {
     width: 100%;
 }
-.off-edit{
+
+.off-edit {
     padding: 10px;
-    border:none;
+    border: none;
     width: 80px;
     background: #29AB87;
-    color:#fff;
-    border-radius:10px;
+    color: #fff;
+    border-radius: 10px;
 }
-.del{
+
+.del {
     padding: 10px;
-    border:none;
+    border: none;
     width: 80px;
     background: #DC143C;
-    color:#fff;
-    border-radius:10px;
+    color: #fff;
+    border-radius: 10px;
 }
+
 .form-title {
     background-color: #f1f1f1;
     padding: 10px;
@@ -117,6 +145,7 @@ table {
     width: 500px;
     margin: 10px auto;
 }
+
 .form {
     background-color: #f1f1f1;
     padding: 20px;
@@ -124,46 +153,58 @@ table {
     width: 500px;
     margin: 30px auto;
 }
+
 #content {
     background-color: #ffffff;
     margin: 0 auto;
     min-height: 600px;
 }
+
 #content::before {
     content: "";
     clear: both;
     display: table;
 }
+
 #content::after {
     content: "";
     clear: both;
     display: table;
 }
+
 .sidebar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
 .sidebar li {
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: #f4f4f4;
-    color: #ffffff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 0px;
+    margin: 0;
 }
-.sidebar li:hover {
+
+.sidebar a:hover {
     background-color: #1F618D;
     color: #fff;
 }
-.sidebar a {
+
+.sidebar li a {
     text-decoration: none;
+    display: block;
     color: #000;
     font-size: 16px;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    */
 }
+
 [class*="col-"] {
     float: left;
     padding: 15px;
 }
+
 #footer {
     background-color: #000000;
     color: #ffffff;
@@ -172,32 +213,35 @@ table {
     padding: 15px;
     font-weight: normal;
 }
+
 /*Media Queries*/
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
 }
+
 /* The Modal (background) */
 .modal {
     display: none;
-   /* Hidden by default */
+    /* Hidden by default */
     position: fixed;
-   /* Stay in place */
+    /* Stay in place */
     z-index: 1;
-   /* Sit on top */
+    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-   /* Full width */
+    /* Full width */
     height: 100%;
-   /* Full height */
+    /* Full height */
     overflow: auto;
-   /* Enable scroll if needed */
+    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-   /* Fallback color */
+    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-   /* Black w/ opacity */
+    /* Black w/ opacity */
 }
+
 /* Modal Content/Box */
 .modal-office {
     background-color: #f1f1f1;
@@ -206,6 +250,7 @@ table {
     width: 300px;
     margin: 10px auto;
 }
+
 /* The Close Button */
 .close {
     color: #aaa;
@@ -213,86 +258,114 @@ table {
     font-size: 28px;
     font-weight: bold;
 }
-.close:hover, .close:focus {
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
+
 @media only screen and (min-width: 600px) {
-   /* For tablets: */
+
+    /* For tablets: */
     .col-s-1 {
         width: 8.33%;
-   }
+    }
+
     .col-s-2 {
         width: 16.66%;
-   }
+    }
+
     .col-s-3 {
         width: 25%;
-   }
+    }
+
     .col-s-4 {
         width: 33.33%;
-   }
+    }
+
     .col-s-5 {
         width: 41.66%;
-   }
+    }
+
     .col-s-6 {
         width: 50%;
-   }
+    }
+
     .col-s-7 {
         width: 58.33%;
-   }
+    }
+
     .col-s-8 {
         width: 66.66%;
-   }
+    }
+
     .col-s-9 {
         width: 75%;
-   }
+    }
+
     .col-s-10 {
         width: 83.33%;
-   }
+    }
+
     .col-s-11 {
         width: 91.66%;
-   }
+    }
+
     .col-s-12 {
         width: 100%;
-   }
+    }
 }
+
 @media only screen and (min-width: 768px) {
-   /* For desktop: */
+
+    /* For desktop: */
     .col-1 {
         width: 8.33%;
-   }
+    }
+
     .col-2 {
         width: 16.66%;
-   }
+    }
+
     .col-3 {
         width: 25%;
-   }
+    }
+
     .col-4 {
         width: 33.33%;
-   }
+    }
+
     .col-5 {
         width: 41.66%;
-   }
+    }
+
     .col-6 {
         width: 50%;
-   }
+    }
+
     .col-7 {
         width: 58.33%;
-   }
+    }
+
     .col-8 {
         width: 66.66%;
-   }
+    }
+
     .col-9 {
         width: 75%;
-   }
+    }
+
     .col-10 {
         width: 83.33%;
-   }
+    }
+
     .col-11 {
         width: 91.66%;
-   }
+    }
+
     .col-12 {
         width: 100%;
-   }
+    }
 }
