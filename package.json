@@ -1,0 +1,34 @@
+{
+  "name": "politico",
+  "version": "1.0.0",
+  "description": "Online elections",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha ./tests/*js --require babel-polyfill --require babel-register --timeout 10000 --exit",
+    "dev": "nodemon --exec babel-node server/index.js",
+    "start": "node server/index.js",
+    "build": "babel server/index.js --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngabopatrick/Politico.git"
+  },
+  "author": "Patrick Ngabonziza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngabopatrick/Politico/issues"
+  },
+  "homepage": "https://github.com/ngabopatrick/Politico#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.2.0"
+  }
+}
