@@ -1,5 +1,4 @@
 import officesData from '../db/officeData';
-// import partiesData from '../db/partyData';
 
 class OfficeController {
   static async createOffice(req, res) {
