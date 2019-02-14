@@ -2,19 +2,19 @@
 
 [![Build Status](https://travis-ci.com/ngabopatrick/Politico.svg?branch=develop)](https://travis-ci.com/ngabopatrick/Politico)
 
--Politico is a platform for the politicians and citizens. It helps citizens give mandates to politicians running for different political offices (https://api-v1-politico.herokuapp.com/)
-#Getting started
--Install dependencies
+- Politico is a platform for the politicians and citizens. It helps citizens give mandates to politicians running for different political offices (https://api-v1-politico.herokuapp.com/)
+# Getting started
+- Install dependencies
     npm install
--Starting the development server
+- Starting the development server
  npm run dev
- -Run tests
+ - Run tests
   npm run tests
-#Technologies used
+# Technologies used
 
-#API-Endpoints
+# API-Endpoints
 JSON Object is returned for every API endpoint, structure of return JSON Object:
--Post / office
+- Post / office
 {
 
 "status": 201,
