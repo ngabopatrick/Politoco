@@ -9,4 +9,4 @@ officeRoute.post('/api/v1/offices', OfficeController.createOffice);
 officeRoute.patch('/api/v1/offices/:id', OfficeController.updateOffice);
 officeRoute.delete('/api/v1/offices/:id', OfficeController.deleteOffice);
 
-module.exports = officeRoute;
+export default officeRoute;

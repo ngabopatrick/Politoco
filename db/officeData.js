@@ -5,4 +5,4 @@ const officesData = [
     {id:4, officeName: "Local representative", officeType: "Local government"}
 ];
 
-module.exports = officesData;
+export default officesData;

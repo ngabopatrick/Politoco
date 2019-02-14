@@ -16,4 +16,4 @@ app.listen(PORT, () => {
     console.log(`Server index running on port ${PORT}...`);
 });
 
-module.exports = app;
+export default app;
