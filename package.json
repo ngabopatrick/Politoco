@@ -7,7 +7,8 @@
     "test": "nyc --reporter=html --reporter=text mocha ./tests/*js --require babel-polyfill --require babel-register --timeout 10000 --exit",
     "dev": "nodemon --exec babel-node server/index.js",
     "start": "node server/index.js",
-    "build": "babel server/index.js --out-dir build"
+    "build": "babel server/index.js --out-dir build",
+    "clean": "rm -rf build && mkdir build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
+    "eslint": "^5.13.0",
     "express": "^4.16.4"
   },
   "devDependencies": {
