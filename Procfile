@@ -1,1 +1,1 @@
-web: NODE_ENV=PRODUCTION nodemon --exec babel-node server/index.js
+web: NODE_ENV=PRODUCTION npm run dev
