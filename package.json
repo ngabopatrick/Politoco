@@ -8,7 +8,9 @@
     "dev": "nodemon --exec babel-node server/index.js",
     "start": "node server/index.js",
     "build": "babel server/index.js --out-dir build",
-    "clean": "rm -rf build && mkdir build"
+    "clean": "rm -rf build && mkdir build",
+     "coverage": "nyc report --reporter=text-lcov | coveralls"
+    
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "coveralls": "^3.0.2",
     "mocha": "^5.2.0",
     "nyc": "^13.2.0"
   }
