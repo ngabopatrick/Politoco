@@ -12,7 +12,7 @@ describe('POST political office', () => {
             .post('/api/v1/offices')
             .send({
                 officeName: 'Omboudsman',
-                // officeType: 'Legislative',
+                officeType: 'Legislative',
             })
             .end((error, res) => {
                 res.should.have.status(200);
