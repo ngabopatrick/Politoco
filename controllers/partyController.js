@@ -2,20 +2,18 @@ import partiesData from '../db/partyData';
 
 class PartyController {
   static async createParty(req, res) {
-    const partyName = req.body.partyName;
-    const hqAddress = req.body.hqAddress;
-    if (!partyName || !hqAddress) {
-      return res.status(400).send({
-        status: '400',
-        message: 'Provide required values'
-      })
-    }
-    const party = partiesData.push(req.body);
-    return res.status(201).send({
-      status: 201,
-      data: [partiesData]
-    });
-  };
+    const party = {
+      id:partiesData.length +1,
+      partyName:req.body.partyName,
+      hqAddress:req.body.hqAddress,
+      logoUrl:req.body.logoUrl,
+    };
+    partiesData.push(party);
+      return res.status(200).send({
+        status: 200,
+        data:[partiesData]
+      });
+  }
   //GET ALL THE PARTIES
   static async getAllParties(req, res) {
     return res.status(200).send({
