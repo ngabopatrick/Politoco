@@ -13,9 +13,10 @@ npm install
  npm run dev
  ```
  - Run tests
+
  ```
   npm run tests
-  ``
+  ```
 # Dependancies
 ```
 Nodejs Runtime encviroment that helps to run javascript both on th server and berouese
@@ -32,4 +33,22 @@ Joi and Morgan API request body error validation and HTTP Request logger respect
 
 JSON Object is returned for every API endpoint, structure of return JSON Object:
 ```
+POST /api/v1/offices Creating a political office.
+
+GET /api/v1/offices Retreiving all political offices.
+
+GET /api/v1/offices/<id> Getting a political office for a specific id.
+
+POST /api/v1/parties Create a political party.
+
+GET /api/v1/parties Get all political parties.
+
+GET /api/v1/parties/<id> Get a specific political party.
+
+PATCH /api/v1/parties/<id>/name Edit a specific political party.
+
+DELETE /api/v1/parties/<id> Delete a particular party.``
+
 ```
+# github pages
+- 
