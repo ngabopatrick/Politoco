@@ -1,22 +1,56 @@
 import officesData from '../db/officeData';
+import Joi from 'joi';
 
 class OfficeController {
   static async createOffice(req, res) {
-    const officeName = req.body.officeName;
-    const officeType = req.body.officeType;
-    if (!officeName || !officeType) {
+
+    const schema = {
+      officeName: Joi.string().regex(/^[a-zA-Z] |[a-zA-Z] ?[a-zA-Z]+$/).min(4).required().trim(),
+      officeType: Joi.string().min(3).max(20).valid(['Federal', 'Legislative', 'State', 'Local government']).required().trim(),
+    };
+    const {error} = Joi.validate(req.body, schema);
+    if (error) {
       return res.status(400).send({
         status: 400,
-        message: 'Provide required values'
-      })
+        error: error.details[0].message
+      });
     }
-    const office = officesData.push(req.body);
-    console.log(office);
-    return res.status(201).send({
-      status: 201,
-      data: [officesData]
-    });
-  };
+    const newOffice = {
+      id: officesData.length + 1,
+      officeName: req.body.officeName,
+      officeType: req.body.officeType,
+    }
+    const offName = officesData.find(c => c.officeName === req.body.officeName);
+    if (!offName){
+      officesData.push(newOffice);
+      return res.status(200).send({
+        status: 200,
+        message: 'Office succesfully created',
+        data: newOffice
+      }); 
+    } else{
+      return res.status(404).send('office with given id already exist');
+    }
+   
+
+
+
+    // const officeName = req.body.officeName;
+    // const officeType = req.body.officeType;
+    // if (!officeName || !officeType) {
+    //   return res.status(400).send({
+    //     status: 400,
+    //     message: 'Provide required values'
+    //   })
+    // }
+    // const office = officesData.push(req.body);
+    // console.log(office);
+    // return res.status(201).send({
+    //   status: 201,
+    //   data: [officesData]
+    // });
+  }
+  
   static async getAllOffices(req, res) {
     return res.status(200).send({
       status: 200,

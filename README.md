@@ -5,15 +5,22 @@
 - Politico is a platform for the politicians and citizens. It helps citizens give mandates to politicians running for different political offices (https://api-v1-politico.herokuapp.com/)
 # Getting started
 - Install dependencies
-    npm install
+```
+npm install
+```
 - Starting the development server
+```
  npm run dev
+ ```
  - Run tests
+ ```
   npm run tests
+  ```
 # Technologies used
 
 # API-Endpoints
 JSON Object is returned for every API endpoint, structure of return JSON Object:
+```
 - Post / office
 {
 
@@ -25,3 +32,4 @@ JSON Object is returned for every API endpoint, structure of return JSON Object:
     "officeType": "Federal", 
     }
 }
+```
