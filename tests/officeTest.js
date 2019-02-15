@@ -6,13 +6,13 @@ chai.use(chaiHttp);
 const expect = chai.expect();
 
 
-describe('POST GOVERNMENT OFFICE', () => {
-    it('It should POST a government office', (done) => {
+describe('POST political office', () => {
+    it('It should POST a political office', (done) => {
         chai.request(app)
             .post('/api/v1/offices')
             .send({
-                officeName: 'President',
-                officeType: 'Federal',
+                officeName: 'Omboudsman',
+                // officeType: 'Legislative',
             })
             .end((error, res) => {
                 res.should.have.status(200);
@@ -21,7 +21,6 @@ describe('POST GOVERNMENT OFFICE', () => {
             });
     });
 });
-
 describe('GET all government offices', () => {
     it('It should display all offices', (done) => {
         chai.request(app)
