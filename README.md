@@ -15,21 +15,21 @@ npm install
  - Run tests
  ```
   npm run tests
-  ```
-# Technologies used
-
+  ``
+# Dependancies
+```
+Nodejs Runtime encviroment that helps to run javascript both on th server and berouese
+```
+```
+Express NodeJS framework used for making the back-end.
+```
+Joi and Morgan API request body error validation and HTTP Request logger respectively.
+# Heroku
+ ```
+ visit link: https://api-v1-politico.com
+ ```
 # API-Endpoints
+
 JSON Object is returned for every API endpoint, structure of return JSON Object:
 ```
-- Post / office
-{
-
-"status": 201,
-"message": "Office succesfully created",
-"data": {
-    "id": 1,
-    "officeName": "Presidency"
-    "officeType": "Federal", 
-    }
-}
 ```
