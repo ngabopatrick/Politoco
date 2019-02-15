@@ -1,7 +1,16 @@
 import officesData from '../db/officeData';
+import Joi from 'joi';
 
 class OfficeController {
   static async createOffice(req, res) {
+    const schema = {
+      officeName: Joi.string().min(4).max(20).required().trim(),
+      officeType: Joi.string().min(3).max(20).valid(['Federal', 'Legislative', 'State', 'Local government']).required().trim(),
+    };
+    const result = Joi.validate(req.body, schema);
+    if(result.error){
+     return res.status(400).send(result.error);
+    }
     const office = {
       id:officesData.length +1,
       officeName:req.body.officeName,

@@ -51,4 +51,4 @@ DELETE /api/v1/parties/<id> Delete a particular party.``
 
 ```
 # github pages
-- 
+ https://ngabopatrick.github.io/Politico/UI/html
