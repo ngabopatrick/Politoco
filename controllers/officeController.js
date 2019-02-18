@@ -19,7 +19,7 @@ class OfficeController {
     officesData.push(office);
       return res.status(200).send({
         status: 200,
-        data:[officesData]
+        data:[office]
       });
   }
   static async getAllOffices(req, res) {
@@ -30,22 +30,23 @@ class OfficeController {
   }
   //Update function 
   static async updateOffice(req, res) {
-    const id = parseInt(req.params.id, 10);
-    const index = officesData.findIndex((item) => {
-      return item.id === parseInt(id, 10)
-    });
-    if (index > -1) {
-      officesData[index].officeName = req.body.officeName;
-      res.status(200).send({
-        status: 200,
-        data: [officesData[index]],
-      });
-    } else {
-      res.status(404).send({
-        status: 404,
-        message: 'item not found'
-      });
+    const schema = {
+      officeName: Joi.string().min(4).required().trim(),
+      officeType: Joi.string().min(3).max(20).valid(['Federal', 'Legislative', 'State', 'Local government']).required().trim(),
+    };
+    const result = Joi.validate(req.body, schema);
+    if(result.error){
+     return res.status(400).send(result.error);
     }
+
+    const office = officesData.find(c => c.id === parseInt(req.params.id));
+    if (!office) res.status(404).send('office with given id was not found');
+    
+    office.officeName = req.body.officeName;
+    res.status(200).send({
+      status: 200,
+      office
+    });
   }
 
   //DELETE FUNCTION
@@ -54,7 +55,6 @@ class OfficeController {
     const index = officesData.findIndex((item) => {
       return item.id === parseInt(id, 10)
     });
-    console.log(index);
     if (index > -1) {
       officesData.splice(index, 1);
       return res.status(200).send({
