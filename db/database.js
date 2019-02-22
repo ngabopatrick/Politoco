@@ -20,7 +20,7 @@ const createTables = () => {
     const partyTable = `CREATE TABLE IF NOT EXISTS
     parties(
         id SERIAL PRIMARY KEY,
-        partyName VARCHAR(128) NOT NULL,
+        partyName VARCHAR(128) UNIQUE NOT NULL,
         hqaddress VARCHAR(128) NOT NULL,
         logourl VARCHAR(128) NOT NULL,
         createdOn TIMESTAMP
@@ -30,7 +30,7 @@ const createTables = () => {
         offices(
             id SERIAL PRIMARY KEY,
             officetype VARCHAR(50) NOT NULL,
-            officename VARCHAR(60) NOT NULL,
+            officename VARCHAR(60) UNIQUE NOT NULL,
             createdOn TIMESTAMP
         )`;
 
@@ -61,12 +61,11 @@ const createTables = () => {
             firstname VARCHAR(60) NOT NULL,
             lastname VARCHAR(60) NOT NULL,
             othername VARCHAR(60),
-            emailaddress VARCHAR(128) NOT NULL,
+            emailaddress VARCHAR(128) UNIQUE NOT NULL,
             phoneNumber VARCHAR(15) NOT NULL,
             passportUrl VARCHAR(255) NOT NULL,
             isAdmin BOOLEAN NOT NULL,
             password VARCHAR(255) NOT NULL,
-            token VARCHAR(1024) NOT NULL,
             createdOn TIMESTAMP
         )`;
     pool.query(userTable);

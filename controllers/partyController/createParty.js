@@ -5,6 +5,14 @@ import Joi from 'joi';
 
 const PartyController ={
   async createParty(req, res) {
+    const { isAdmin } = req.user;    
+
+    if(!isAdmin){
+      return res.status(401).send({
+        status: res.statusCode,
+        error: 'Unauthorized, Only Admin can access this end-point',
+      });
+    }
     const partyQuery = `INSERT INTO parties(partyname,hqaddress,logourl,createdOn) 
     VALUES($1,$2,$3,$4)
     returning *`;
@@ -39,7 +47,7 @@ const PartyController ={
       const resul = await executeQuery.query(partyQuery,values);
       if(resul.rowCount===1){
         return res.status(201).send({
-          status: res.statusCode,
+          status: 201,
           data: resul.rows,
         });
       }

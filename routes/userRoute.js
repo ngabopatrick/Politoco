@@ -1,11 +1,10 @@
 import express from 'express';
-import createUser from '../controllers/userController/createUser';
-// import userLogin from '../controllers/userController/userLogin';
+import userController from '../controllers/userController/userController';
 
 
 const userRoute = express.Router();
 
-// userRoute.get('/api/v1/users/:id', userLogin.userLogin);
-userRoute.post('/api/v1/users', createUser.createUser);
+userRoute.post('/api/v1/auth/signup', userController.createAccount);
+userRoute.post('/api/v1/auth/login', userController.userLogin);
 
 export default userRoute;

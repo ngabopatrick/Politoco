@@ -3,6 +3,14 @@ import executeQuery from '../../db/executeQuery';
 
 const PartyController = {
     async updateParty(req, res) {
+        const { isAdmin } = req.user;    
+
+        if(!isAdmin){
+          return res.status(401).send({
+            status: res.statusCode,
+            error: 'Unauthorized, Only Admin can access this end-point',
+          });
+        }
         const partyQuery = `UPDATE parties SET partyname=$2, WHERE id=$1 RETURNING *`;
         const findOneQuery = `SELECT * FROM parties WHERE id =$1`;
        

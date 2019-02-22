@@ -4,6 +4,14 @@ import Joi from 'joi';
 
 const OfficeController={
   async createOffice(req,res){
+    const { isAdmin } = req.user;    
+
+    if(!isAdmin){
+      return res.status(401).send({
+        status: res.statusCode,
+        error: 'Unauthorized, Only Admin can access',
+      });
+    }
     const offQuery = `INSERT INTO offices(officename,officetype,createdOn) 
     VALUES($1,$2,$3)
     returning *`;
